@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LEONIDA LEDGER — GTA VI trophy guide &amp; tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: cited steps for every trophy, a six-phase platinum roadmap, the one missable flagged, and progress that saves in your browser.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-in">
+    <div class="brand">
+      <p class="brand-kicker">Grand Theft Auto VI · PlayStation 5 · Offline guide &amp; tracker</p>
+      <h1>LEONIDA <span>LEDGER</span></h1>
+      <p class="brand-sub">All 55 trophies. 188 steps, every one cited. One missable — flagged everywhere it matters.</p>
+    </div>
+    <div class="progress-card" aria-label="Your progress">
+      <div class="ring-wrap">
+        <svg class="ring" viewBox="0 0 84 84" width="84" height="84" aria-hidden="true">
+          <circle class="ring-track" cx="42" cy="42" r="36"></circle>
+          <circle class="ring-fill" id="ringFill" cx="42" cy="42" r="36"></circle>
+        </svg>
+        <div class="ring-label"><strong id="pctText">0%</strong><span>complete</span></div>
+      </div>
+      <div class="progress-nums">
+        <p class="big-count"><strong id="earnedCount">0</strong> of 55 earned</p>
+        <p class="points-line"><span id="pointsEarned">0</span> / 1350 PSN points</p>
+        <ul class="grade-counts" id="gradeCounts"></ul>
+      </div>
+    </div>
+  </div>
+  <nav class="tabs" aria-label="Views">
+    <button type="button" class="tab is-active" data-view="tracker">Tracker</button>
+    <button type="button" class="tab" data-view="roadmap">Roadmap to Platinum</button>
+    <button type="button" class="tab" data-view="missables">Missables <span class="tab-flag">1</span></button>
+    <button type="button" class="tab" data-view="sources">Sources &amp; Citations</button>
+  </nav>
+</header>
+
+<main>
+  <section id="view-tracker" class="view">
+    <div class="controls" role="search">
+      <label class="search-box">Search
+        <input id="search" type="search" placeholder="Trophy name or description…" autocomplete="off">
+      </label>
+      <div class="chips" id="kindChips" role="group" aria-label="Filter by kind"></div>
+      <label class="grade-pick">Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="switch"><input type="checkbox" id="hideEarned"> Hide earned</label>
+      <label class="switch shield-switch"><input type="checkbox" id="shieldToggle"> Spoiler shield</label>
+      <div class="io-buttons">
+        <button type="button" id="exportBtn">Export progress</button>
+        <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+      </div>
+    </div>
+    <p class="shield-note" id="shieldNote" hidden>Spoiler shield is on: unearned story trophies are hidden until you earn them — or choose to reveal one.</p>
+    <p class="result-line" id="resultLine"></p>
+    <div id="trophyList" class="trophy-list"></div>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <div id="roadmapRoot"></div>
+  </section>
+
+  <section id="view-missables" class="view" hidden>
+    <div id="missablesRoot"></div>
+  </section>
+
+  <section id="view-sources" class="view" hidden>
+    <div id="sourcesRoot"></div>
+  </section>
+</main>
+
+<footer class="colophon">
+  <p><strong>LEONIDA LEDGER</strong> is a fan-made companion. Trophy names, descriptions and grades are shown exactly as PlayStation publishes them; every guide and step here is written for this app and cites its source beside the text. Not affiliated with Rockstar Games or Take-Two Interactive. Works fully offline — progress lives only in this browser.</p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
